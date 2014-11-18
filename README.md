@@ -7,6 +7,8 @@ This project is aimed towards creating project reports for agriculture based far
 
 KrishiMoney will automate the entire process and this is POC geared towards that.
 
+Note : To understand how django-user-accounts work refer to http://django-user-accounts.readthedocs.org/en/latest/index.html
+
 Getting Started:
 
 
