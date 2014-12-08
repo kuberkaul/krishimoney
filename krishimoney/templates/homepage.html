@@ -1,32 +1,54 @@
-{% extends "banner_base.html" %}
+{% extends "site_base.html" %}
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Welcome" %}{% endblock %}
+{% block head_title %}pinax-project-account{% endblock %}
 
 {% block body_class %}home{% endblock %}
 
-{% block banner %}
-    <h1>{% trans "Welcome to Krishimoney" %}</h1>
-    <p>
-        {% blocktrans %}
-        blah blah blah
-        {% endblocktrans %}
-    </p>
-
-    <h2>About Account Project</h2>
-    <p>
-        {% blocktrans %}
-        blah blah blah
-        {% endblocktrans %}
-    </p>
-
+{% block body_base %}
+<section class="jumbotron">
+  <div class="container">
+    {% include "_messages.html" %}
+    <h1>Welcome to Krishi Money</h1>
+    <p>A website that helps automate preparing project reports to apply for loans on your agricultural lands</p>
     {% if user.is_authenticated %}
-        {% url "what_next" as what_next_url %}
-        <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}" class="btn btn-primary large">What Next</a>?{% endblocktrans %}</p>
+    {% url "create_report" as create_report_url %}
+    {% url "view_sample" as view_sample_url %}
+    <p>{% blocktrans %}<a href="{{ create_report_url }}" class="btn btn-default large">Create New Report</a><a href="{{ view_sample_url }}" class="btn btn-info">View Sample Report</a>{% endblocktrans %}</p>
     {% else %}
-        {% url "account_login" as login_url %}
-        {% url "account_signup" as signup_url %}
-        <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn btn-default">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
+    {% url "account_login" as login_url %}
+    {% url "account_signup" as signup_url %}
+    <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn btn-default">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
     {% endif %}
+  </div>
+</section>
+<section>
+  {% if user.is_authenticated %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h4><a href="#">GM food crops: HLC proposes overhaul of regulatory system</a></h3>
+          <p>The government-appointed High Level Committee (HLC) to review environmental laws, while proposing a near complete overhaul of the regulatory system, has sounded a note of caution on genetically modified (GM) food crops.</p>
+          <a href="#" class="btn-default btn">Read More</a>
+        </div>
+        <div class="col-md-3">
+          <h4><a href="#">Droughts, unseasonal rains push Jalna farmers to agricultural labour</a></h3>
+            <p>An angry silence greets one on entering the village of Dhasalgaon in Jalna district. Perpetuating agrarian crises for the last three years have made the once-proud farmers of this village poor.</p>
+            <a href="#" class="btn-default btn">Read More</a>
+          </div>
+          <div class="col-md-3">
+            <h4><a href="#">A bitter pill for sugarcane farmers</a></h3>
+              <p>Farmers, no doubt, have to battle several odds right from deciding which crop to grow till selling the yield. Adverse weather conditions, lack of groundwater and other financial woes have continuously been hitting their prospects.</p>
+              <a href="#" class="btn-default btn">Read More</a>
+            </div>
+            <div class="col-md-3">
+              <h4><a href="#">Red gram may bring cheer to farmers</a></h3>
+                <p>If you go by the sheet of yellow covering the agriculture fields at many places in Adilabad district at present, it can be said that red gram will bring the much-needed relief to the unhappy cotton and soya</p>
+                <a href="http://www.thehindu.com/news/national/telangana/red-gram-may-bring-cheer-to-farmers/article6633559.ece?topicpage=true&topicId=1333" class="btn-default btn">Read More</a>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+</section>
 {% endblock %}

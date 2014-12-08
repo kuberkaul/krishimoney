@@ -7,6 +7,16 @@
         <p class="navbar-text">
             <i class="fa fa-user"></i> {% user_display request.user %}
         </p>
+        <li><a href = "#">About</a></li>
+        <li><a href = "#">Contact Us</a></li>
+        <li class = "dropdown">
+
+          <a href = "#" class = "dropdown-toggle" data-toggle="dropdown">Social Media <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href = "#">Twitter</a></li>
+            <li><a href = "#">Facebook</a></li>
+          </ul>
+        </li>
         <li>
             <a href="{% url 'account_settings' %}"><i class="fa fa-cog"></i> {% trans "Settings" %}</a>
         </li>
