@@ -15,7 +15,7 @@
     {% if user.is_authenticated %}
     {% url "create_report" as create_report_url %}
     {% url "view_sample" as view_sample_url %}
-    <p>{% blocktrans %}<a href="{{ create_report_url }}" class="btn btn-default large">Create New Report</a><a href="{{ view_sample_url }}" class="btn btn-info">View Sample Report</a>{% endblocktrans %}</p>
+    <p>{% blocktrans %}<a href="{{ create_report_url }}" class="btn btn-default large">Create New Report</a>  <a href="{{ view_sample_url }}" class="btn btn-info">View Sample Report</a>{% endblocktrans %}</p>
     {% else %}
     {% url "account_login" as login_url %}
     {% url "account_signup" as signup_url %}
