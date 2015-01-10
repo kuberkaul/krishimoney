@@ -1,0 +1,524 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}pinax-project-account{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<section>
+  <div class="container">
+    <h3>Crop Specifications</h3>
+  </div>
+  <div class="container">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputCropName" class="control-label col-xs-4">Name</label>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropName" placeholder="Name of the crop">
+        </div>
+      </div>
+      <div class="container">
+        <h4>Cultivation</h3>
+      </div>
+      <div class="form-group">
+        <label for="inputType" class="control-label col-xs-4">Type</label>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropType" placeholder="Type">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputLife" class="control-label col-xs-4">Life of Trees</label>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropLife" placeholder="Life of Trees">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputGestation" class="control-label col-xs-4">Gestation / Growth / Development Period</label>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropGestation" placeholder="Gestation">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputVariety" class="control-label col-xs-4">Varieties</label>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropVariety" placeholder="Varieties">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputSeason" class="control-label col-xs-4">Recommended Planting Season</label>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropFromSeason" placeholder="From">
+        </div>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropToSeason" placeholder="To">
+        </div>
+      </div>
+      <div class="container">
+        <h4>Planting Specifications</h3>
+        </div>
+      <div class="form-group">
+        <label for="inputSpacing" class="control-label col-xs-4">Spacing</label>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropSpacingLength" placeholder="Length">
+        </div>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropSpacingBreadth" placeholder="Breadth">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPopulation" class="control-label col-xs-4">Plant Population per Acre</label>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropPopulation" placeholder="Plant Population per Acre">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPitSize" class="control-label col-xs-4">Pit Size</label>
+        <div class="col-xs-3">
+          <input type="text" class="form-control" id="cropPitSize" placeholder="Pit Size">
+        </div>
+      </div>
+
+      <div class="container">
+        <h4>Irrigation</h3>
+        </div>
+        <div class="form-group">
+          <label for="inputIrrigationSystem" class="control-label col-xs-4">Irrigation System</label>
+          <div class="col-xs-3">
+            <input type="text" class="form-control" id="cropIrrigationSystem" placeholder="Irrigation System">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputIrrigationPerPlant" class="control-label col-xs-4">Irrigation per Plant</label>
+          <div class="col-xs-3">
+            <input type="text" class="form-control" id="cropIrrigationPerPlant" placeholder="Irrigation per Plant">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputIrrigationPerAcre" class="control-label col-xs-4">Irrigation per acre per day</label>
+          <div class="col-xs-3">
+            <input type="text" class="form-control" id="cropIrrigationPerAcre" placeholder="Irrigation per acre per day">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputDischargePerDay" class="control-label col-xs-4">Discharge per day</label>
+          <div class="col-xs-3">
+            <input type="text" class="form-control" id="cropDischargePerDay" placeholder="Discharge per day">
+          </div>
+        </div>
+
+        <div class="container">
+          <h4>Planting Protection</h3>
+          </div>
+          <div class="form-group">
+            <label for="inputPests" class="control-label col-xs-4">Pests</label>
+            <div class="col-xs-4">
+              <input type="text" class="form-control" id="cropPests" placeholder="Pests">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputDiseases" class="control-label col-xs-4">Diseases</label>
+            <div class="col-xs-4">
+              <input type="text" class="form-control" id="cropDiseases" placeholder="Diseases">
+            </div>
+          </div>
+
+        <div class="form-group">
+        <h4 id="tables-bordered">Manure & Fertilisers Grams /Plant</h4>
+        <div class="bs-example" data-example-id="bordered-table">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Years</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="col-xs-3">Organic Manure  - Kgs per Plant</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Neem cake - Kgs per Plant</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Nitrogen - Grams per Plant</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Phosphorous - Grams per Plant</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Potassium - Grams per Plant</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- /example -->
+      </div>
+
+      <div class="form-group">
+        <h4 id="tables-bordered">Labour in Mandays</h4>
+        <div class="bs-example" data-example-id="bordered-table">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Years</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="col-xs-3">Planting</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Training / Pruning</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Staking</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Weeding</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Interculture</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Nutrient Application</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Irrigation Management</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Plant Protection</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Harvest</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">General and Miscellaneous</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- /example -->
+      </div>
+
+      <div class="form-group">
+        <h4 id="tables-bordered">Plant Protection No. of Sprays</h4>
+        <div class="bs-example" data-example-id="bordered-table">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Years</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="col-xs-3">Pest Control</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Disease Control</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Micro Nutrients</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+              <tr>
+                <th scope="row">Harmone Management</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- /example -->
+      </div>
+
+      <div class="form-group">
+        <h4 id="tables-bordered">Prices per Kg in the last 3 years</h4>
+        <div class="bs-example" data-example-id="bordered-table">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="col-xs-3">Rs.</th>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><input type="text" class="form-control" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- /example -->
+      </div>
+      <div class="form-group">
+        <div class="col-xs-10">
+          <button type="submit" class="btn btn-primary">Submit specifications</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
