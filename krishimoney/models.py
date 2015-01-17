@@ -35,8 +35,23 @@ class priceLastThreeYears(models.Model):
 	secondYear = models.IntegerField(default=80)
 	secondYear = models.IntegerField(default=80)
 
+class manurePerPlant(models.Model):
+	nameOfCrop = models.CharField(max_length=50)
+	name = models.CharField(max_length=100)
 
+class amountPerPlant(models.Model):
+	year = models.IntegerField(default=80)
+	value = models.FloatField()
+	manurePerPlant = models.ForeignKey(manurePerPlant)
 
+class laborInMandays(models.Model):
+	nameOfCrop = models.CharField(max_length=50)
+        name = models.CharField(max_length=100)
+        
+class amountPerMandays(models.Model):
+	year = models.IntegerField(default=80)
+        value = models.IntegerField(default=80)
+        loborInMAndays = models.ForeignKey(laborInMandays)
 
 	
 
