@@ -12,7 +12,8 @@
     <h3>Crop Specifications</h3>
   </div>
   <div class="container">
-    <form class="form-horizontal" action="/adminPageSubmitted/">
+    <form class="form-horizontal" method="POST" action="/adminPageSubmitted/">
+      {% csrf_token %}
       <div class="form-group">
         <label for="inputCropName" class="control-label col-xs-4">Name</label>
         <div class="col-xs-3">
