@@ -17,7 +17,7 @@
       <div class="form-group">
         <label for="inputCropName" class="control-label col-xs-4">Name</label>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropName" placeholder="Name of the crop">
+          {{ form.cropName }}
         </div>
       </div>
       <div class="container">
@@ -26,34 +26,34 @@
       <div class="form-group">
         <label for="inputType" class="control-label col-xs-4">Type</label>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropType" placeholder="Type">
+          {{ form.cropType }}
         </div>
       </div>
       <div class="form-group">
         <label for="inputLife" class="control-label col-xs-4">Life of Trees</label>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropLife" placeholder="Life of Trees">
+          {{ form.cropLife }}
         </div>
       </div>
       <div class="form-group">
         <label for="inputGestation" class="control-label col-xs-4">Gestation / Growth / Development Period</label>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropGestation" placeholder="Gestation">
+          {{ form.cropGestation }}
         </div>
       </div>
       <div class="form-group">
         <label for="inputVariety" class="control-label col-xs-4">Varieties</label>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropVariety" placeholder="Varieties">
+          {{ form.cropVariety }}
         </div>
       </div>
       <div class="form-group">
         <label for="inputSeason" class="control-label col-xs-4">Recommended Planting Season</label>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropFromSeason" placeholder="From">
+          {{ form.cropFromSeason }}
         </div>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropToSeason" placeholder="To">
+          {{ form.cropToSeason }}
         </div>
       </div>
       <div class="container">
@@ -62,22 +62,22 @@
       <div class="form-group">
         <label for="inputSpacing" class="control-label col-xs-4">Spacing</label>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropSpacingLength" placeholder="Length">
+          {{ form.cropSpacingLength }}
         </div>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropSpacingBreadth" placeholder="Breadth">
+          {{ form.cropSpacingBreadth }}
         </div>
       </div>
       <div class="form-group">
         <label for="inputPopulation" class="control-label col-xs-4">Plant Population per Acre</label>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropPopulation" placeholder="Plant Population per Acre">
+          {{ form.cropPopulation }}
         </div>
       </div>
       <div class="form-group">
         <label for="inputPitSize" class="control-label col-xs-4">Pit Size</label>
         <div class="col-xs-3">
-          <input type="text" class="form-control" id="cropPitSize" placeholder="Pit Size">
+          {{ form.cropPitSize }}
         </div>
       </div>
 
@@ -87,25 +87,24 @@
         <div class="form-group">
           <label for="inputIrrigationSystem" class="control-label col-xs-4">Irrigation System</label>
           <div class="col-xs-3">
-            <input type="text" class="form-control" id="cropIrrigationSystem" placeholder="Irrigation System">
+            {{ form.cropIrrigationSystem }}
           </div>
         </div>
         <div class="form-group">
           <label for="inputIrrigationPerPlant" class="control-label col-xs-4">Irrigation per Plant</label>
           <div class="col-xs-3">
-            <input type="text" class="form-control" id="cropIrrigationPerPlant" placeholder="Irrigation per Plant">
+            {{ form.cropIrrigationPerPlant }}
           </div>
         </div>
         <div class="form-group">
           <label for="inputIrrigationPerAcre" class="control-label col-xs-4">Irrigation per acre per day</label>
           <div class="col-xs-3">
-            <input type="text" class="form-control" id="cropIrrigationPerAcre" placeholder="Irrigation per acre per day">
-          </div>
+            {{ form.cropIrrigationPerAcre }}
         </div>
         <div class="form-group">
           <label for="inputDischargePerDay" class="control-label col-xs-4">Discharge per day</label>
           <div class="col-xs-3">
-            <input type="text" class="form-control" id="cropDischargePerDay" placeholder="Discharge per day">
+            {{ form.cropDischargePerDay }}
           </div>
         </div>
 
@@ -115,13 +114,13 @@
           <div class="form-group">
             <label for="inputPests" class="control-label col-xs-4">Pests</label>
             <div class="col-xs-4">
-              <input type="text" class="form-control" id="cropPests" placeholder="Pests">
+              {{ form.cropPests }}
             </div>
           </div>
           <div class="form-group">
             <label for="inputDiseases" class="control-label col-xs-4">Diseases</label>
             <div class="col-xs-4">
-              <input type="text" class="form-control" id="cropDiseases" placeholder="Diseases">
+              {{ form.cropDiseases }}
             </div>
           </div>
 
@@ -149,78 +148,78 @@
             <tbody>
               <tr>
                 <th scope="row" class="col-xs-3">Organic Manure  - Kgs per Plant</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.organicManure1 }}</td>
+                <td>{{ form.organicManure2 }}</td>
+                <td>{{ form.organicManure3 }}</td>
+                <td>{{ form.organicManure4 }}</td>
+                <td>{{ form.organicManure5 }}</td>
+                <td>{{ form.organicManure6 }}</td>
+                <td>{{ form.organicManure7 }}</td>
+                <td>{{ form.organicManure8 }}</td>
+                <td>{{ form.organicManure9 }}</td>
+                <td>{{ form.organicManure10 }}</td>
+                <td>{{ form.organicManure11 }}</td>
+                <td>{{ form.organicManure12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Neem cake - Kgs per Plant</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.neemCake1 }}</td>
+                <td>{{ form.neemCake2 }}</td>
+                <td>{{ form.neemCake3 }}</td>
+                <td>{{ form.neemCake4 }}</td>
+                <td>{{ form.neemCake5 }}</td>
+                <td>{{ form.neemCake6 }}</td>
+                <td>{{ form.neemCake7 }}</td>
+                <td>{{ form.neemCake8 }}</td>
+                <td>{{ form.neemCake9 }}</td>
+                <td>{{ form.neemCake10 }}</td>
+                <td>{{ form.neemCake11 }}</td>
+                <td>{{ form.neemCake12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Nitrogen - Grams per Plant</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.nitrogen1 }}</td>
+                <td>{{ form.nitrogen2 }}</td>
+                <td>{{ form.nitrogen3 }}</td>
+                <td>{{ form.nitrogen4 }}</td>
+                <td>{{ form.nitrogen5 }}</td>
+                <td>{{ form.nitrogen6 }}</td>
+                <td>{{ form.nitrogen7 }}</td>
+                <td>{{ form.nitrogen8 }}</td>
+                <td>{{ form.nitrogen9 }}</td>
+                <td>{{ form.nitrogen10 }}</td>
+                <td>{{ form.nitrogen11 }}</td>
+                <td>{{ form.nitrogen12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Phosphorous - Grams per Plant</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.phosphorous1 }}</td>
+                <td>{{ form.phosphorous2 }}</td>
+                <td>{{ form.phosphorous3 }}</td>
+                <td>{{ form.phosphorous4 }}</td>
+                <td>{{ form.phosphorous5 }}</td>
+                <td>{{ form.phosphorous6 }}</td>
+                <td>{{ form.phosphorous7 }}</td>
+                <td>{{ form.phosphorous8 }}</td>
+                <td>{{ form.phosphorous9 }}</td>
+                <td>{{ form.phosphorous10 }}</td>
+                <td>{{ form.phosphorous11 }}</td>
+                <td>{{ form.phosphorous12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Potassium - Grams per Plant</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.potassium1 }}</td>
+                <td>{{ form.potassium2 }}</td>
+                <td>{{ form.potassium3 }}</td>
+                <td>{{ form.potassium4 }}</td>
+                <td>{{ form.potassium5 }}</td>
+                <td>{{ form.potassium6 }}</td>
+                <td>{{ form.potassium7 }}</td>
+                <td>{{ form.potassium8 }}</td>
+                <td>{{ form.potassium9 }}</td>
+                <td>{{ form.potassium10 }}</td>
+                <td>{{ form.potassium11 }}</td>
+                <td>{{ form.potassium12 }}</td>
               </tr>
             </tbody>
           </table>
@@ -251,153 +250,153 @@
             <tbody>
               <tr>
                 <th scope="row" class="col-xs-3">Planting</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.planting1 }}</td>
+                <td>{{ form.planting2 }}</td>
+                <td>{{ form.planting3 }}</td>
+                <td>{{ form.planting4 }}</td>
+                <td>{{ form.planting5 }}</td>
+                <td>{{ form.planting6 }}</td>
+                <td>{{ form.planting7 }}</td>
+                <td>{{ form.planting8 }}</td>
+                <td>{{ form.planting9 }}</td>
+                <td>{{ form.planting10 }}</td>
+                <td>{{ form.planting11 }}</td>
+                <td>{{ form.planting12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Training / Pruning</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.pruning1 }}</td>
+                <td>{{ form.pruning2 }}</td>
+                <td>{{ form.pruning3 }}</td>
+                <td>{{ form.pruning4 }}</td>
+                <td>{{ form.pruning5 }}</td>
+                <td>{{ form.pruning6 }}</td>
+                <td>{{ form.pruning7 }}</td>
+                <td>{{ form.pruning8 }}</td>
+                <td>{{ form.pruning9 }}</td>
+                <td>{{ form.pruning10 }}</td>
+                <td>{{ form.pruning11 }}</td>
+                <td>{{ form.pruning12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Staking</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.staking1 }}</td>
+                <td>{{ form.staking2 }}</td>
+                <td>{{ form.staking3 }}</td>
+                <td>{{ form.staking4 }}</td>
+                <td>{{ form.staking5 }}</td>
+                <td>{{ form.staking6 }}</td>
+                <td>{{ form.staking7 }}</td>
+                <td>{{ form.staking8 }}</td>
+                <td>{{ form.staking9 }}</td>
+                <td>{{ form.staking10 }}</td>
+                <td>{{ form.staking11 }}</td>
+                <td>{{ form.staking12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Weeding</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.weeding1 }}</td>
+                <td>{{ form.weeding2 }}</td>
+                <td>{{ form.weeding3 }}</td>
+                <td>{{ form.weeding4 }}</td>
+                <td>{{ form.weeding5 }}</td>
+                <td>{{ form.weeding6 }}</td>
+                <td>{{ form.weeding7 }}</td>
+                <td>{{ form.weeding8 }}</td>
+                <td>{{ form.weeding9 }}</td>
+                <td>{{ form.weeding10 }}</td>
+                <td>{{ form.weeding11 }}</td>
+                <td>{{ form.weeding12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Interculture</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.interculture1 }}</td>
+                <td>{{ form.interculture2 }}</td>
+                <td>{{ form.interculture3 }}</td>
+                <td>{{ form.interculture4 }}</td>
+                <td>{{ form.interculture5 }}</td>
+                <td>{{ form.interculture6 }}</td>
+                <td>{{ form.interculture7 }}</td>
+                <td>{{ form.interculture8 }}</td>
+                <td>{{ form.interculture9 }}</td>
+                <td>{{ form.interculture10 }}</td>
+                <td>{{ form.interculture11 }}</td>
+                <td>{{ form.interculture12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Nutrient Application</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.nutrientApplication1 }}</td>
+                <td>{{ form.nutrientApplication2 }}</td>
+                <td>{{ form.nutrientApplication3 }}</td>
+                <td>{{ form.nutrientApplication4 }}</td>
+                <td>{{ form.nutrientApplication5 }}</td>
+                <td>{{ form.nutrientApplication6 }}</td>
+                <td>{{ form.nutrientApplication7 }}</td>
+                <td>{{ form.nutrientApplication8 }}</td>
+                <td>{{ form.nutrientApplication9 }}</td>
+                <td>{{ form.nutrientApplication10 }}</td>
+                <td>{{ form.nutrientApplication11 }}</td>
+                <td>{{ form.nutrientApplication12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Irrigation Management</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.irrigationManagement1 }}</td>
+                <td>{{ form.irrigationManagement2 }}</td>
+                <td>{{ form.irrigationManagement3 }}</td>
+                <td>{{ form.irrigationManagement4 }}</td>
+                <td>{{ form.irrigationManagement5 }}</td>
+                <td>{{ form.irrigationManagement6 }}</td>
+                <td>{{ form.irrigationManagement7 }}</td>
+                <td>{{ form.irrigationManagement8 }}</td>
+                <td>{{ form.irrigationManagement9 }}</td>
+                <td>{{ form.irrigationManagement10 }}</td>
+                <td>{{ form.irrigationManagement11 }}</td>
+                <td>{{ form.irrigationManagement12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Plant Protection</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.plantProtection1 }}</td>
+                <td>{{ form.plantProtection2 }}</td>
+                <td>{{ form.plantProtection3 }}</td>
+                <td>{{ form.plantProtection4 }}</td>
+                <td>{{ form.plantProtection5 }}</td>
+                <td>{{ form.plantProtection6 }}</td>
+                <td>{{ form.plantProtection7 }}</td>
+                <td>{{ form.plantProtection8 }}</td>
+                <td>{{ form.plantProtection9 }}</td>
+                <td>{{ form.plantProtection10 }}</td>
+                <td>{{ form.plantProtection11 }}</td>
+                <td>{{ form.plantProtection12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Harvest</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.harvest1 }}</td>
+                <td>{{ form.harvest2 }}</td>
+                <td>{{ form.harvest3 }}</td>
+                <td>{{ form.harvest4 }}</td>
+                <td>{{ form.harvest5 }}</td>
+                <td>{{ form.harvest6 }}</td>
+                <td>{{ form.harvest7 }}</td>
+                <td>{{ form.harvest8 }}</td>
+                <td>{{ form.harvest9 }}</td>
+                <td>{{ form.harvest10 }}</td>
+                <td>{{ form.harvest11 }}</td>
+                <td>{{ form.harvest12 }}</td>
               </tr>
               <tr>
                 <th scope="row">General and Miscellaneous</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.miscellaneous1 }}</td>
+                <td>{{ form.miscellaneous2 }}</td>
+                <td>{{ form.miscellaneous3 }}</td>
+                <td>{{ form.miscellaneous4 }}</td>
+                <td>{{ form.miscellaneous5 }}</td>
+                <td>{{ form.miscellaneous6 }}</td>
+                <td>{{ form.miscellaneous7 }}</td>
+                <td>{{ form.miscellaneous8 }}</td>
+                <td>{{ form.miscellaneous9 }}</td>
+                <td>{{ form.miscellaneous10 }}</td>
+                <td>{{ form.miscellaneous11 }}</td>
+                <td>{{ form.miscellaneous12 }}</td>
               </tr>
             </tbody>
           </table>
@@ -428,63 +427,63 @@
             <tbody>
               <tr>
                 <th scope="row" class="col-xs-3">Pest Control</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.pestControl1 }}</td>
+                <td>{{ form.pestControl2 }}</td>
+                <td>{{ form.pestControl3 }}</td>
+                <td>{{ form.pestControl4 }}</td>
+                <td>{{ form.pestControl5 }}</td>
+                <td>{{ form.pestControl6 }}</td>
+                <td>{{ form.pestControl7 }}</td>
+                <td>{{ form.pestControl8 }}</td>
+                <td>{{ form.pestControl9 }}</td>
+                <td>{{ form.pestControl10 }}</td>
+                <td>{{ form.pestControl11 }}</td>
+                <td>{{ form.pestControl12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Disease Control</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.diseaseControl1 }}</td>
+                <td>{{ form.diseaseControl2 }}</td>
+                <td>{{ form.diseaseControl3 }}</td>
+                <td>{{ form.diseaseControl4 }}</td>
+                <td>{{ form.diseaseControl5 }}</td>
+                <td>{{ form.diseaseControl6 }}</td>
+                <td>{{ form.diseaseControl7 }}</td>
+                <td>{{ form.diseaseControl8 }}</td>
+                <td>{{ form.diseaseControl9 }}</td>
+                <td>{{ form.diseaseControl10 }}</td>
+                <td>{{ form.diseaseControl11 }}</td>
+                <td>{{ form.diseaseControl12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Micro Nutrients</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.microNutrients1 }}</td>
+                <td>{{ form.microNutrients2 }}</td>
+                <td>{{ form.microNutrients3 }}</td>
+                <td>{{ form.microNutrients4 }}</td>
+                <td>{{ form.microNutrients5 }}</td>
+                <td>{{ form.microNutrients6 }}</td>
+                <td>{{ form.microNutrients7 }}</td>
+                <td>{{ form.microNutrients8 }}</td>
+                <td>{{ form.microNutrients9 }}</td>
+                <td>{{ form.microNutrients10 }}</td>
+                <td>{{ form.microNutrients11 }}</td>
+                <td>{{ form.microNutrients12 }}</td>
               </tr>
               <tr>
                 <th scope="row">Harmone Management</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.harmoneManagement1 }}</td>
+                <td>{{ form.harmoneManagement2 }}</td>
+                <td>{{ form.harmoneManagement3 }}</td>
+                <td>{{ form.harmoneManagement4 }}</td>
+                <td>{{ form.harmoneManagement5 }}</td>
+                <td>{{ form.harmoneManagement6 }}</td>
+                <td>{{ form.harmoneManagement7 }}</td>
+                <td>{{ form.harmoneManagement8 }}</td>
+                <td>{{ form.harmoneManagement9 }}</td>
+                <td>{{ form.harmoneManagement10 }}</td>
+                <td>{{ form.harmoneManagement11 }}</td>
+                <td>{{ form.harmoneManagement12 }}</td>
               </tr>
             </tbody>
           </table>
@@ -506,9 +505,9 @@
             <tbody>
               <tr>
                 <th scope="row" class="col-xs-3">Rs.</th>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
-                <td><input type="text" class="form-control" /></td>
+                <td>{{ form.prices1 }}</td>
+                <td>{{ form.prices2 }}</td>
+                <td>{{ form.prices3 }}</td>
               </tr>
             </tbody>
           </table>
@@ -516,6 +515,8 @@
       </div>
       <div class="form-group">
         <div class="col-xs-10">
+          {{ form.errors }}
+          {{ form.non_field_errors }}
           <button id=rectButton type="submit" class="btn btn-primary">Submit specifications</button>
         </div>
       </div>
