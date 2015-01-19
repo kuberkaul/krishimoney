@@ -15,5 +15,6 @@ Getting Started:
     clone https://github.com/kuberkaul/krishimoney.git
     cd krishimoney
     pip install -r requirements.txt
+    pip install django-adminplus
     python manage.py syncdb
     python manage.py runserver
