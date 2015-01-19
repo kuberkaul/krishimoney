@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.shortcuts import render_to_response
+from django.template import RequestContext
 
-def my_view(request):
-   return render_to_response('krishimoney/template/admin_form.html')
 
-admin.site.register_view('admin_form',my_view , 'AdminForm')
-print 'abcd'
+
+def adminForm(request):
+    return render_to_response("admin_form.html")
+admin.site.register_view("admin_form", view=adminForm)

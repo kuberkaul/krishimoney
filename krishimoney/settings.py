@@ -114,9 +114,9 @@ TEMPLATE_DIRS = [
 ]
 
 INSTALLED_APPS = [
+    "adminplus",
     "django.contrib.admin",
     "django.contrib.auth",
-    "adminplus",
     "django.contrib.contenttypes",
     "django.contrib.messages",
     "django.contrib.sessions",

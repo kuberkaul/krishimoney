@@ -4,8 +4,10 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 from django.contrib import admin
 from krishimoney import views
+from adminplus.sites import AdminSitePlus
 
-admin.site.register()
+admin.site = AdminSitePlus()
+admin.autodiscover()
 
 urlpatterns = patterns("",
     url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
